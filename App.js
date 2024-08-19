@@ -6,6 +6,7 @@
  */
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, StatusBar, SafeAreaView, ImageBackground } from 'react-native';
+import BackgroundImage from '../LogInProject/assets/images/BackGroundImage.jpg';
 
 const LoginScreen = () => {
   return (
@@ -13,7 +14,7 @@ const LoginScreen = () => {
       <StatusBar barStyle="dark-content" />
       <View style={styles.headerContainer}>
         <ImageBackground
-          source={require('../LogInProject/assets/images/BackGroundImage.jpg')}
+          source= {BackgroundImage}
           style={styles.backgroundImage}
           resizeMode="cover"
         >
@@ -23,14 +24,16 @@ const LoginScreen = () => {
 
       <View style={styles.bodyContainer}>
 
-        <Text style={styles.welcomeText}>Welcome Back!</Text>
+        <Text style={styles.Text}>Welcome Back!</Text>
         <Text style={styles.subText}>Please sign in to continue.</Text>
 
+        <Text style={styles.lablelText}>Username or Phone Number</Text>
         <TextInput
           style={styles.input}
           placeholder="Username or Phone Number"
           placeholderTextColor="#aaa"
         />
+        <Text style={styles.lablelText}>Password</Text>
         <TextInput
           style={styles.input}
           placeholder="Password"
@@ -77,8 +80,14 @@ const styles = StyleSheet.create({
     flex: 3,
     paddingHorizontal: 20,
   },
-  welcomeText: {
+  Text: {
     fontSize: 24,
+    fontWeight: 'bold',
+    color: '#000',
+    marginBottom: 5,
+  },
+  lablelText: {
+    fontSize: 15,
     fontWeight: 'bold',
     color: '#000',
     marginBottom: 5,
@@ -112,7 +121,7 @@ const styles = StyleSheet.create({
   },
   forgotPasswordText: {
     color: '#3E7BFA',
-    textAlign: 'center',
+    textAlign: 'right',
     marginTop: 10,
   },
 });
