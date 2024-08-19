@@ -6,7 +6,7 @@
  */
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, StatusBar, SafeAreaView, ImageBackground } from 'react-native';
-import BackgroundImage from './LogInProject/assets/images/BackGroundImage.jpg';
+import BackgroundImage from './assets/images/BackGroundImage.jpg';
 
 const LoginScreen = () => {
   return (
