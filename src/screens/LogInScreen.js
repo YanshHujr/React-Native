@@ -36,6 +36,9 @@ const LogInScreen = () => {
       <TouchableOpacity style={styles.signInButton}>
         <Text style={styles.signInButtonText}>SIGN IN</Text>
       </TouchableOpacity>
+      <TouchableOpacity>
+        <Text style={styles.forgotPasswordText}>Forgot password?</Text>
+      </TouchableOpacity>
     </View>
   </SafeAreaView>
 );
@@ -119,6 +122,11 @@ signInButtonText: {
   color: '#FFF',
   fontSize: 16,
   fontWeight: 'bold',
+},
+forgotPasswordText: {
+  color: '#3E7BFA',
+  textAlign: 'right',
+  marginTop: 10,
 },
 });
 
