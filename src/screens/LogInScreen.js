@@ -22,13 +22,13 @@ const LogInScreen = () => {
       <Text style={styles.lablelText}>Username or Phone Number</Text>
       <TextInput
         style={styles.input}
-        placeholder="Username or Phone Number"
+        placeholder="Enter Username or Phone Number"
         placeholderTextColor="#aaa"
       />
       <Text style={styles.lablelText}>Password</Text>
       <TextInput
         style={styles.input}
-        placeholder="Password"
+        placeholder="Enter Password"
         placeholderTextColor="#aaa"
         secureTextEntry={true}
       />
