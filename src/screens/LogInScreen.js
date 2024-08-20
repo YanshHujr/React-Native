@@ -7,22 +7,22 @@ const LogInScreen = () => {
     <SafeAreaView style={styles.container}>
     <StatusBar barStyle="dark-content" />
     <View style={styles.headerContainer}>
-    <ImageBackground
+      <ImageBackground
         source= {BackgroundImage}
         style={styles.backgroundImage}
         resizeMode="cover">
           <Text style={styles.headerText}>Sign In</Text>
-        </ImageBackground>
-      </View>
-      <View style={styles.bodyContainer}>
+      </ImageBackground>
+    </View>
+    <View style={styles.bodyContainer}>
 
       <Text style={styles.Text}>Welcome Back!</Text>
       <Text style={styles.subText}>Please sign in to continue.</Text>
 
-      <Text style={styles.lablelText}>Username or Phone Number</Text>
+      <Text style={styles.lablelText}>Email Address</Text>
       <TextInput
         style={styles.input}
-        placeholder="Enter Username or Phone Number"
+        placeholder="Enter Email Address"
         placeholderTextColor="#aaa"
       />
       <Text style={styles.lablelText}>Password</Text>
@@ -35,10 +35,6 @@ const LogInScreen = () => {
 
       <TouchableOpacity style={styles.signInButton}>
         <Text style={styles.signInButtonText}>SIGN IN</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity>
-        <Text style={styles.forgotPasswordText}>Forgot password?</Text>
       </TouchableOpacity>
     </View>
   </SafeAreaView>
@@ -75,7 +71,7 @@ bodyContainer: {
   backgroundColor: '#fff',
   width: '100%',
   height: '120%',
-  borderRadius: 50,
+  borderRadius: 25,
   paddingHorizontal: 20,
 },
 Text: {
@@ -123,11 +119,6 @@ signInButtonText: {
   color: '#FFF',
   fontSize: 16,
   fontWeight: 'bold',
-},
-forgotPasswordText: {
-  color: '#3E7BFA',
-  textAlign: 'right',
-  marginTop: 10,
 },
 });
 
