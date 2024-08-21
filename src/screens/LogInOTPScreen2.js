@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, StatusBar, SafeAreaView, ImageBackground} from 'react-native';
+import { View, Text, TextInput, StyleSheet, StatusBar, SafeAreaView, ImageBackground} from 'react-native';
 import BackgroundImage from '../../assets/images/BackGroundImage.jpg';
 
-function LogInScreen (){
+function LogInOTPScreen2 (){
   return (
     <SafeAreaView style={styles.container}>
     <StatusBar barStyle="dark-content" />
@@ -16,29 +16,26 @@ function LogInScreen (){
     </View>
     <View style={styles.bodyContainer}>
 
-      <Text style={styles.Text}>Welcome Back!</Text>
-      <Text style={styles.subText}>Please sign in to continue.</Text>
-
-      <Text style={styles.lablelText}>Email Address</Text>
+      <Text style={styles.Text}>Enter Verification Code</Text>
+      <Text style={styles.subText}>Please enter your phone number to complete log in.</Text>
+      <View style={styles.OTPcontainer}>
       <TextInput
         style={styles.input}
-        placeholder="Enter Email Address"
         placeholderTextColor="#aaa"
       />
-      <Text style={styles.lablelText}>Password</Text>
-      <TextInput
+       <TextInput
         style={styles.input}
-        placeholder="Enter Password"
         placeholderTextColor="#aaa"
-        secureTextEntry={true}
       />
-
-      <TouchableOpacity style={styles.signInButton}>
-        <Text style={styles.signInButtonText}>SIGN IN</Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Text style={styles.forgotPasswordText}>Forgot password?</Text>
-      </TouchableOpacity>
+       <TextInput
+        style={styles.input}
+        placeholderTextColor="#aaa"
+      />
+       <TextInput
+        style={styles.input}
+        placeholderTextColor="#aaa"
+      />
+      </View>
     </View>
   </SafeAreaView>
 );
@@ -85,13 +82,6 @@ Text: {
   marginTop: 10,
   marginLeft: 10,
 },
-lablelText: {
-  fontSize: 15,
-  fontWeight: 'bold',
-  color: '#000',
-  marginBottom: 5,
-  marginLeft: 5,
-},
 subText: {
   fontSize: 14,
   color: '#7A7A7A',
@@ -105,29 +95,16 @@ input: {
   borderWidth: 1,
   borderRadius: 10,
   paddingHorizontal: 10,
-  backgroundColor: '#FFF',
-  marginBottom: 15,
+  backgroundColor: '#B3E0E8',
+  marginBottom: 50,
   marginLeft: 5,
+  width: 50,
 },
-signInButton: {
-  height: 50,
-  backgroundColor: '#33A6A6',
-  justifyContent: 'center',
-  alignItems: 'center',
-  borderRadius: 8,
-  marginBottom: 15,
-  marginLeft: 5,
-},
-signInButtonText: {
-  color: '#FFF',
-  fontSize: 16,
-  fontWeight: 'bold',
-},
-forgotPasswordText: {
-  color: '#3E7BFA',
-  textAlign: 'right',
-  marginTop: 10,
+OTPcontainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
 },
 });
 
-export default LogInScreen;
+export default LogInOTPScreen2;

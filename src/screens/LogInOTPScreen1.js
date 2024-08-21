@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, StatusBar, SafeAreaView, ImageBackground} from 'react-native';
 import BackgroundImage from '../../assets/images/BackGroundImage.jpg';
 
-function LogInScreen (){
+function LogInOTPScreen1 (){
   return (
     <SafeAreaView style={styles.container}>
     <StatusBar barStyle="dark-content" />
@@ -17,27 +17,16 @@ function LogInScreen (){
     <View style={styles.bodyContainer}>
 
       <Text style={styles.Text}>Welcome Back!</Text>
-      <Text style={styles.subText}>Please sign in to continue.</Text>
+      <Text style={styles.subText}>Please enter your phone number to complete log in.</Text>
 
-      <Text style={styles.lablelText}>Email Address</Text>
+      <Text style={styles.lablelText}>Phone Number</Text>
       <TextInput
         style={styles.input}
-        placeholder="Enter Email Address"
+        placeholder="Enter Phone Number"
         placeholderTextColor="#aaa"
       />
-      <Text style={styles.lablelText}>Password</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Enter Password"
-        placeholderTextColor="#aaa"
-        secureTextEntry={true}
-      />
-
       <TouchableOpacity style={styles.signInButton}>
-        <Text style={styles.signInButtonText}>SIGN IN</Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Text style={styles.forgotPasswordText}>Forgot password?</Text>
+        <Text style={styles.signInButtonText}>CONTINUE</Text>
       </TouchableOpacity>
     </View>
   </SafeAreaView>
@@ -106,7 +95,7 @@ input: {
   borderRadius: 10,
   paddingHorizontal: 10,
   backgroundColor: '#FFF',
-  marginBottom: 15,
+  marginBottom: 50,
   marginLeft: 5,
 },
 signInButton: {
@@ -123,11 +112,6 @@ signInButtonText: {
   fontSize: 16,
   fontWeight: 'bold',
 },
-forgotPasswordText: {
-  color: '#3E7BFA',
-  textAlign: 'right',
-  marginTop: 10,
-},
 });
 
-export default LogInScreen;
+export default LogInOTPScreen1;
